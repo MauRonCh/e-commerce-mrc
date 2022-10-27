@@ -1,0 +1,27 @@
+.home {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    justify-content: center;
+}
+.home__filter-container {
+    width: 20%;
+    display: block;
+    padding-top: 50px;
+}
+.home__container {
+    padding: 20px;
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 80%;
+}
+@media (max-width: 768px) {
+    .home__filter-container {
+        display: none;
+    }
+}

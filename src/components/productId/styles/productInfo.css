@@ -1,0 +1,103 @@
+.product-id__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    margin: 50px;
+}
+.product-id__similar-container {
+    grid-column: span 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px
+}
+.product-id__similar-title {
+    display: block;
+    width: 100%;
+}
+.product-info {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+.product-info__title {
+    margin-bottom: 15px;
+}
+.product-info__desc {
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.product-info__footer {
+    display: grid;
+    row-gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+.product-info__price-label,
+.product-info__qty-label {
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #c7c7c7;
+    margin-bottom: 5px;
+}
+.product-info__price-num {
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 500;
+    gap: 5px;
+    transform: translateX(10px);
+}
+.product-info__price-num::before {
+    content: '$';
+}
+.counter {
+    display: flex;
+    border: 1px solid var(--light-gray);
+    width: max-content;
+}
+.counter__minus,
+.counter__plus,
+.counter__num {
+    height: 30px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.counter__minus,
+.counter__plus {
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.counter__minus:hover,
+.counter__plus:hover {
+    background-color: #eee;
+}
+.counter__num {
+    aspect-ratio: 1.5;
+    border-right: 1px solid var(--light-gray);
+    border-left: 1px solid var(--light-gray);
+}
+.product-info__btn {
+    grid-column: span 2;
+    padding: 15px;
+    background-color: var(--color-red);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: filter 0.1s ease, border-radius 0.2s ease;
+    width: 100%;
+}
+.product-info__btn:hover {
+    filter: brightness(1.2);
+    border-radius: 20px;
+    transition: filter 0.1s ease, border-radius 0.2s ease;
+}
+
+@media (max-width: 768px) {
+    .product-id__container {
+        display: flex;
+        flex-direction: column;
+    }
+}
